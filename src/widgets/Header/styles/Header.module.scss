@@ -3,22 +3,49 @@
   padding-bottom: 53px !important;
 
   .header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 20px 34px;
+    background-color: var(--grey-11);
     border: 1px solid var(--grey-15);
     border-radius: 100px;
+    z-index: 2;
 
     .nav__list {
       display: flex;
       gap: 26px;
+      align-items: center;
+    }
+
+    .nav__listLink {
+      font-size: 14px;
+      color: var(--absolute-white);
+
+      &.active {
+        border-radius: 82px;
+        padding: 12px 24px;
+        background-color: var(--grey-15);
+      }
     }
 
     .header__right {
       display: flex;
+      align-items: center;
       gap: 30px;
+
+      button {
+        font-size: 14px;
+      }
+    }
+
+    .login__btn {
+      border-radius: 82px;
+      padding: 14px 30px;
+      background-color: var(--green-60);
+      color: var(--grey-11);
     }
   }
 }

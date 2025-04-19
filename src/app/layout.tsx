@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "../shared/styles/base/globals.scss";
 import "../shared/styles/variables/vars.scss";
 import "../shared/styles/variables/fonts.scss";
+import BackgroundElement from "@/shared/ui/BackgroundElement/BackgroundElement";
 
 export const metadata: Metadata = {
   title: "Thor Bank",
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <BackgroundElement />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,8 +1,22 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import LogoDesktop from "@/shared/assets/svg/LogoDesktop.svg";
 import cls from "@/widgets/Header/styles/header.module.scss";
 
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/careers", label: "Careers" },
+  { href: "/about", label: "About" },
+  { href: "/security", label: "Security" },
+];
+
+console.log(cls);
+
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <div className={`container ${cls.header__wrapper}`}>
       <header className={cls.header}>
@@ -12,36 +26,24 @@ export default function Header() {
 
         <nav className={cls.header__nav}>
           <ul className={`list__reset ${cls.nav__list}`}>
-            <li className={cls.active}>
-              <Link className={cls.nav__listLink} href="/">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link className={cls.nav__listLink} href="/careers">
-                Careers
-              </Link>
-            </li>
-            <li>
-              <Link className={cls.nav__listLink} href="/about">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link className={cls.nav__listLink} href="/security">
-                Security
-              </Link>
-            </li>
+            {navLinks.map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className={`${cls.nav__listLink} ${
+                    pathname === href ? cls.active : ""
+                  }`}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
         <div className={cls.header__right}>
-          <button className={`${cls.login__btn} ${cls.signUp__btn}`}>
-            Sign up
-          </button>
-          <button className={`${cls.login__btn} ${cls.login__btn}`}>
-            Login
-          </button>
+          <button>Sign up</button>
+          <button className={`${cls.login__btn}`}>Login</button>
         </div>
       </header>
     </div>
