@@ -1,0 +1,24 @@
+.header__wrapper {
+  padding-top: 20px !important;
+  padding-bottom: 53px !important;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 34px;
+    border: 1px solid var(--grey-15);
+    border-radius: 100px;
+
+    .nav__list {
+      display: flex;
+      gap: 26px;
+    }
+
+    .header__right {
+      display: flex;
+      gap: 30px;
+    }
+  }
+}
