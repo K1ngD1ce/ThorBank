@@ -23,6 +23,11 @@
     .nav__listLink {
       font-size: 14px;
       color: var(--absolute-white);
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--green-60);
+      }
 
       &.active {
         border-radius: 82px;
@@ -39,13 +44,6 @@
       button {
         font-size: 14px;
       }
-    }
-
-    .login__btn {
-      border-radius: 82px;
-      padding: 14px 30px;
-      background-color: var(--green-60);
-      color: var(--grey-11);
     }
   }
 }

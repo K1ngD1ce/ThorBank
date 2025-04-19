@@ -1,0 +1,9 @@
+.signUpBtn {
+  color: var(--absolute-white);
+  font-size: 14px;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--green-60);
+  }
+}

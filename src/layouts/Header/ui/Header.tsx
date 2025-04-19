@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LogoDesktop from "@/shared/assets/svg/LogoDesktop.svg";
-import cls from "@/widgets/Header/styles/header.module.scss";
+import cls from "@/layouts/Header/ui/Header.module.scss";
+import LoginBtn from "@/features/header/ui/LoginBtn";
+import SignUpBtn from "@/features/header/ui/SignUpBtn";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -11,8 +13,6 @@ const navLinks = [
   { href: "/about", label: "About" },
   { href: "/security", label: "Security" },
 ];
-
-console.log(cls);
 
 export default function Header() {
   const pathname = usePathname();
@@ -42,8 +42,8 @@ export default function Header() {
         </nav>
 
         <div className={cls.header__right}>
-          <button>Sign up</button>
-          <button className={`${cls.login__btn}`}>Login</button>
+          <SignUpBtn />
+          <LoginBtn />
         </div>
       </header>
     </div>

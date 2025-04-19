@@ -4,6 +4,7 @@ import "../shared/styles/base/globals.scss";
 import "../shared/styles/variables/vars.scss";
 import "../shared/styles/variables/fonts.scss";
 import BackgroundElement from "@/shared/ui/BackgroundElement/BackgroundElement";
+import Header from "@/layouts/Header/ui/Header";
 
 export const metadata: Metadata = {
   title: "Thor Bank",
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <BackgroundElement />
+        <Header />
         {children}
       </body>
     </html>

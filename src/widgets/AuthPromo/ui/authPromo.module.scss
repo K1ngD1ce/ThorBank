@@ -1,0 +1,35 @@
+.authPromo {
+  display: flex;
+  flex-direction: column;
+
+  .authPromo__requiments {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    margin-bottom: 20px;
+    padding: 10px 20px 10px 12px;
+    background-color: var(--grey-15);
+    border-radius: 61px;
+
+    span {
+      font-weight: 300;
+      line-height: 133%;
+    }
+  }
+
+  .authPromo__text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    max-width: 825px;
+    margin-bottom: 50px;
+  }
+
+  .authPromo__descr {
+    font-weight: 300;
+    line-height: 150%;
+    color: var(--white-90);
+  }
+}
