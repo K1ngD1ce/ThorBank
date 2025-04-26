@@ -37,7 +37,7 @@ export default function AuthPromo() {
               Welcome to YourBank Empowering Your <span>Financial Journey</span>
             </h2>
 
-            <div className={cls.authPromo__descr}>
+            <div className={`text ${cls.authPromo__descr}`}>
               At YourBank, our mission is to provide comprehensive banking
               solutions that empower individuals and businesses to achieve their
               financial goals. We are committed to delivering personalized and

@@ -1,16 +1,57 @@
+import Divider from "@/shared/ui/Divider/Divider";
 import cls from "./tabBar.module.scss";
 
 export default function TabBar() {
   return (
     <>
       <div className={cls.tabBar__wrapper}>
-        <h2 className="section__title">
-          Our <span>Products</span>
-        </h2>
+        <div className={cls.tabBar__text}>
+          <h2 className="section__title">
+            Our <span>Products</span>
+          </h2>
 
-        <div className="tabBar__btn">кнопка</div>
+          <p className={`text `}>
+            Discover a range of comprehensive and customizable banking products
+            at YourBank, designed to suit your unique financial needs and
+            aspirations
+          </p>
+        </div>
+
+        <div className={cls.tabBar__btns}>
+          <button className={`${cls.active} ${cls.tabBtn}`}>
+            For Individuals
+          </button>
+          <button className={cls.tabBtn}>For Businesses</button>
+        </div>
       </div>
-      <div className="tabBar__content">контент</div>
+
+      <div className={cls.tabBar__content}>
+        <div className={cls.tabBar__contentCard}>
+          <div className={cls.svg__wrapper}>
+            <div className={cls.icon__backgroundFirst}>
+              <div className={cls.icon__backgroundSec}>
+                <svg
+                  width="35"
+                  height="34"
+                  viewBox="0 0 35 34"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.5454 21.1814C14.5908 21.1814 14.0316 20.644 14.0316 19.6796V18.5637C10.0221 18.2881 6.02625 17.4615 1.88037 15.877V13.6038C6.98089 15.8633 12.0951 16.6624 17.6593 16.6624C23.2372 16.6624 28.3513 15.8633 33.4518 13.6038V15.877C29.3059 17.4615 25.31 18.2881 21.3006 18.5637V19.6796C21.3006 20.644 20.7414 21.1814 19.7867 21.1814H15.5454ZM6.09444 30.3432H29.2377C32.0608 30.3432 33.4518 28.9656 33.4518 26.1412V12.7359C33.4518 9.9115 32.0608 8.53378 29.2377 8.53378H6.09444C3.28506 8.53378 1.88037 9.9115 1.88037 12.7359V26.1412C1.88037 28.9656 3.28506 30.3432 6.09444 30.3432ZM10.7449 9.7324H12.8588V7.29382C12.8588 6.24673 13.4725 5.65431 14.5362 5.65431H20.7959C21.8597 5.65431 22.4598 6.24673 22.4598 7.29382V9.70485H24.5736V7.44537C24.5736 4.85523 23.2234 3.64282 20.7551 3.64282H14.5635C12.2314 3.64282 10.7449 4.85523 10.7449 7.44537V9.7324Z"
+                    fill="#CAFF33"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div className={cls.card__title}>Тайтл</div>
+          <div className={`text ${cls.card__descr}`}>
+            ДескрДескрДескрДескрДескрДескрДескрДескр
+          </div>
+        </div>
+        <Divider />
+      </div>
     </>
   );
 }
