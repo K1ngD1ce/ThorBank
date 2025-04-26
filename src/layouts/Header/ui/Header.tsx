@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
+
 import LogoDesktop from "@/shared/assets/svg/LogoDesktop.svg";
 import cls from "@/layouts/Header/ui/Header.module.scss";
 import LoginBtn from "@/features/header/ui/LoginBtn";
@@ -17,6 +20,27 @@ const navLinks = [
 export default function Header() {
   const pathname = usePathname();
 
+  const navRef = useRef<HTMLUListElement>(null);
+  const [bgStyle, setBgStyle] = useState({});
+
+  useEffect(() => {
+    const activeLink = navRef.current?.querySelector(
+      `.${cls.nav__listLink}.${cls.active}`
+    );
+    const containerRect = navRef.current?.getBoundingClientRect();
+
+    if (activeLink && containerRect) {
+      const linkRect = (activeLink as HTMLElement).getBoundingClientRect();
+
+      setBgStyle({
+        left: linkRect.left - containerRect.left,
+        top: linkRect.top - containerRect.top,
+        width: linkRect.width,
+        height: linkRect.height,
+      });
+    }
+  }, [pathname]);
+
   return (
     <div className={`container ${cls.header__wrapper}`}>
       <header className={cls.header}>
@@ -25,9 +49,16 @@ export default function Header() {
         </Link>
 
         <nav className={cls.header__nav}>
-          <ul className={`list__reset ${cls.nav__list}`}>
+          <ul ref={navRef} className={`list__reset ${cls.nav__list}`}>
+            <motion.div
+              className={cls.nav__switcher}
+              layout
+              transition={{ type: "spring", stiffness: 500, damping: 30 }}
+              style={bgStyle}
+            />
+
             {navLinks.map(({ href, label }) => (
-              <li key={href}>
+              <li key={href} className={cls.nav__item}>
                 <Link
                   href={href}
                   className={`${cls.nav__listLink} ${
