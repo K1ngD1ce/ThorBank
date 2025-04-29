@@ -36,19 +36,19 @@
       "id": 4,
       "title": "Business Checking",
       "svg": "Bag",
-      "descr": "Effortlessly handle company transactions with a business checking account."
+      "descr": "Effortlessly manage your business transactions with our business checking accounts. Enjoy streamlined access to funds, free business debit cards, and compatibility with major accounting software to simplify your bookkeeping and financial planning."
     },
     {
       "id": 5,
       "title": "Business Savings",
       "svg": "Box",
-      "descr": "Help your business grow its reserves with our business savings solutions."
+      "descr": "Grow your company's reserves with our high-yield business savings accounts. Designed to support long-term financial health, these accounts offer competitive interest rates, automatic transfer options, and secure access to your funds whenever needed."
     },
     {
       "id": 6,
       "title": "Business Loan",
       "svg": "Money",
-      "descr": "Expand operations or invest in new ventures with our tailored business loans."
+      "descr": "Empower your business with our tailored loan solutions. Whether you're expanding operations, purchasing equipment, or managing cash flow, our business loans provide flexible terms, personalized support, and quick approval processes to help you move forward with confidence."
     }
   ]
 }

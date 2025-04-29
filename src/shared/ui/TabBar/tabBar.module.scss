@@ -11,90 +11,44 @@
   }
 
   .tabBar__btns {
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 83px;
     padding: 14px;
     border: 1px solid var(--grey-15);
     border-radius: 82px;
     background-color: var(--grey-11);
-
-    .tabBtn {
-      padding: 14px 24px;
-
-      &.active {
-        padding: 14px 24px;
-        background-color: var(--green-60);
-        border-radius: 100px;
-        font-weight: 400;
-        color: var(--grey-11);
-        width: 181px;
-        height: 55px;
-      }
-    }
-  }
-}
-
-.tabBar__content {
-  display: flex;
-  gap: 50px;
-  padding-top: 100px;
-
-  .tabBar__contentCard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 465px;
-  }
-
-  .svg__wrapper {
-    position: relative;
-    margin-bottom: 30px;
-    border-radius: 50%;
-
-    &::after {
-      content: "";
+    overflow: hidden;
+  
+    .tabSlider {
       position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 50%;
-      background: linear-gradient(to top, #1a1a1a, rgba(202, 255, 51, 0) 100%);
-      pointer-events: none;
+      top: 14px;
+      left: 14px;
+      width: calc(50% - 14px);
+      height: 55px;
+      background-color: var(--green-60);
+      border-radius: 100px;
+      transition: transform 0.3s ease;
+      z-index: 0;
     }
-
-    .icon__backgroundFirst {
-      border-radius: 50%;
-      padding: 12px;
-      width: 98px;
-      height: 98px;
-      background: linear-gradient(
-        180deg,
-        rgba(202, 255, 51, 0.05) 0%,
-        rgba(202, 255, 51, 0.05) 100%
-      );
-      box-shadow: inset 0 20px 40px -10px rgb(32 41 10 / 40%);
-    }
-
-    .icon__backgroundSec {
-      border-radius: 50%;
-      padding: 20px;
-      width: 74px;
-      height: 74px;
-      background: linear-gradient(
-        180deg,
-        rgba(202, 255, 51, 0.1) 0%,
-        rgba(202, 255, 51, 0.1) 46.77%
-      );
-
-      box-shadow: inset 0 20px 40px -10px rgb(46 59 16 / 40%) svg {
-        width: 34px;
-        height: 34px;
+  
+    .tabBtn {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 14px 24px;
+      border: none;
+      background: none;
+      font-weight: 400;
+      color: var(--white);
+      cursor: pointer;
+      transition: color 0.3s ease;
+  
+      &.active {
+        color: var(--grey-11);
       }
     }
-  }
-  .card__title {
-    margin-bottom: 20px;
   }
 }
