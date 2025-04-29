@@ -1,7 +1,9 @@
 import cls from "./openAccount.module.scss";
 
 const OpenAccount = () => (
-  <button className={cls.openAccountBtn}>Open account</button>
+  <button className={`custom__btn ${cls.openAccountBtn}`}>
+    <span>Open account</span>
+  </button>
 );
 
 export default OpenAccount;

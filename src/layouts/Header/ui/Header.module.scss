@@ -15,25 +15,39 @@
     z-index: 2;
 
     .nav__list {
+      position: relative;
       display: flex;
-      gap: 26px;
+      gap: 13px;
       align-items: center;
     }
 
+    .nav__item {
+      position: relative;
+      z-index: 1;
+    }
+
     .nav__listLink {
+      position: relative;
+      padding: 12px 24px;
+      border-radius: 82px;
       font-size: 14px;
       color: var(--absolute-white);
-      transition: color 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
 
       &:hover {
         color: var(--green-60);
       }
 
       &.active {
-        border-radius: 82px;
-        padding: 12px 24px;
-        background-color: var(--grey-15);
+        z-index: 2;
       }
+    }
+
+    .nav__switcher {
+      position: absolute;
+      background-color: var(--grey-15);
+      border-radius: 82px;
+      z-index: 0;
     }
 
     .header__right {
