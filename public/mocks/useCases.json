@@ -1,0 +1,79 @@
+{
+  "individuals": [
+    {
+      "title": "For Individuals",
+      "text": "For individuals, our mortgage services pave the way to homeownership, and our flexible personal loans provide vital support during various life milestones. We also prioritize retirement planning, ensuring a financially secure future for our customers",
+      "cards": [
+        {
+          "name": "Managing Personal Finances",
+          "svg": "HandMoney"
+        },
+        {
+          "name": "Saving for the Future",
+          "svg": "HandsDollar"
+        },
+        {
+          "name": "Homeownership",
+          "svg": "Bank"
+        },
+        {
+          "name": "Education Funding",
+          "svg": "Book"
+        }
+      ],
+      "stats": [
+        {
+            "percent": 78,
+            "text": "Secure Retirement Planning"
+        },
+        {
+            "percent": 63,
+            "text": "Manageable Debt Consolidation"
+        },
+        {
+            "percent": 91,
+            "text": "Reducing financial burdens"
+        }
+      ]
+    }
+  ],
+  "business": [
+    {
+      "title": "For Business",
+      "text": " For businesses, we empower growth with working capital solutions that optimize cash flow, and our tailored financing options fuel business expansion. Whatever your financial aspirations, YourBank is committed to providing the right tools and support to achieve them",
+      "cards": [
+        {
+          "name": "Startups and Entrepreneurs",
+          "svg": "Houses"
+        },
+        {
+          "name": "Cash Flow Management",
+          "svg": "Money"
+        },
+        {
+          "name": "Business Expansion",
+          "svg": "BuseinessExtention"
+        },
+        {
+          "name": "Payment Solutions",
+          "svg": "DollarWithBg"
+        }
+      ],
+
+      "stats": [
+        {
+          "percent": 65,
+          "text": "Cash Flow Management"
+        },
+        {
+          "percent": 70,
+          "text": "Drive Business Expansion"
+        },
+        {
+          "percent": 45,
+          "text": "Streamline payroll processing"
+        }
+      ]
+    }
+  ]
+}

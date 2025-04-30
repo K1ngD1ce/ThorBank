@@ -64,15 +64,15 @@ export default function ProductsTabs() {
                   return (
                     <React.Fragment key={product.id}>
                       <div className={cls.tabBar__contentCard}>
-                        <div className={cls.svg__wrapper}>
-                          <div className={cls.icon__backgroundFirst}>
-                            <div className={cls.icon__backgroundSec}>
+                        <div className="svg__wrapper">
+                          <div className="icon__backgroundFirst">
+                            <div className="icon__backgroundSec">
                               {Icon && <Icon width={34} height={34} />}
                             </div>
                           </div>
                         </div>
                         <div className={cls.card__title}>{product.title}</div>
-                        <div className={`text ${cls.card__descr}`}>{product.descr}</div>
+                        <div className={`text`}>{product.descr}</div>
                       </div>
                       {index < products.length - 1 && <Divider />}
                     </React.Fragment>

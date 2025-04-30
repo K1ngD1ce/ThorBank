@@ -15,52 +15,6 @@
     max-width: 465px;
   }
 
-  .svg__wrapper {
-    position: relative;
-    margin-bottom: 30px;
-    border-radius: 50%;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 50%;
-      background: linear-gradient(to top, #1a1a1a, rgba(202, 255, 51, 0) 100%);
-      pointer-events: none;
-    }
-
-    .icon__backgroundFirst {
-      border-radius: 50%;
-      padding: 12px;
-      width: 98px;
-      height: 98px;
-      background: linear-gradient(
-        180deg,
-        rgba(202, 255, 51, 0.05) 0%,
-        rgba(202, 255, 51, 0.05) 100%
-      );
-      box-shadow: inset 0 20px 40px -10px rgb(32 41 10 / 40%);
-    }
-
-    .icon__backgroundSec {
-      border-radius: 50%;
-      padding: 20px;
-      width: 74px;
-      height: 74px;
-      background: linear-gradient(
-        180deg,
-        rgba(202, 255, 51, 0.1) 0%,
-        rgba(202, 255, 51, 0.1) 46.77%
-      );
-
-      box-shadow: inset 0 20px 40px -10px rgb(46 59 16 / 40%) svg {
-        width: 34px;
-        height: 34px;
-      }
-    }
-  }
   .card__title {
     margin-bottom: 20px;
   }
